@@ -1,0 +1,410 @@
+/* 
+
+Theme Name:Stuka
+Theme URI:
+Author:Mükremin BİÇER
+Author URI:http://newdesigner.tech/
+Description:WordPressTeması
+Version:1.0.0
+Text Domain:stuka
+ */
+@charset "utf-8";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+a {
+  color: #0071c5;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*Resetler*/
+
+h2 {
+  color: #00aeef;
+  font-weight: 400;
+}
+ul {
+  margin-bottom: 0px;
+}
+.img-fluid {
+  width: 100%;
+}
+
+/* Hizalamalar */
+.no-padding {
+  padding: 0px;
+}
+.no-margin {
+  margin: 0px;
+}
+
+.ortala {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: inherit;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+.margin-right-10 {
+  margin-right: 10px;
+}
+.margin-right-15 {
+  margin-right: 15px;
+}
+.margin-right-20 {
+  margin-right: 20px;
+}
+.margin-right-45 {
+  margin-right: 45px;
+}
+
+.margin-left-25 {
+  margin-left: 25px;
+}
+.margin-left-45 {
+  margin-left: 45px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-25 {
+  margin-top: 25px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-top-35 {
+  margin-top: 35px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-45 {
+  margin-top: 45px;
+}
+.margin-top-50 {
+  margin-top: 50px;
+}
+.margin-top-150 {
+  margin-top: 150px;
+}
+.margin-top-250 {
+  margin-top: 250px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+.margin-bottom-35 {
+  margin-bottom: 35px;
+}
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+.margin-bottom-45 {
+  margin-bottom: 45px;
+}
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
+.padding-top-60 {
+  padding-top: 60px;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 20px;
+}
+.padding-bottom-60 {
+  padding-bottom: 60px;
+}
+
+.padding-left-25 {
+  padding-left: 25px;
+}
+
+.padding-right-25 {
+  padding-right: 25px;
+}
+
+/*Mobile Menü*/
+.mobile-menu {
+  right: -500px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  width: 255px;
+  position: absolute;
+  background-color: #ffffff;
+  top: 74px;
+  border: 1px solid #0071c5;
+  z-index: 99;
+  padding: 10px;
+  display: none;
+}
+.mobile-menu ul li {
+  display: block;
+  margin-left: 5px;
+}
+.mobile-menu-show-hide {
+  display: block;
+  right: 15px;
+}
+.mobile-menu-ackapa {
+  display: none;
+  border: solid 1px #0071c5;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: right;
+  margin-top: 35px;
+}
+.mobil-menusu li {
+  line-height: 30px;
+}
+
+/*Butonlar*/
+
+.buton {
+  line-height: 44px;
+  height: 44px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+  border: none;
+}
+.mavi-buton {
+  color: #ffffff;
+  background-color: #0071c5;
+}
+.mavi-buton:hover {
+  color: #ffffff;
+}
+
+.acik-mavi-buton {
+  color: #ffffff;
+  background-color: #00aeef;
+}
+.acik-mavi-buton:hover {
+  color: #ffffff;
+}
+
+/*Header Üst*/
+
+.header-ust {
+  background-color: #333333;
+  color: #cccccc;
+  height: 44px;
+  line-height: 44px;
+}
+.header-ust a {
+  color: #cccccc;
+}
+
+.header-sosyal {
+  text-align: right;
+}
+.header-sosyal li {
+  display: inline-block;
+}
+.header-sosyal li a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #cccccc;
+}
+
+.header-alani {
+  height: 110px;
+  line-height: 110px;
+  background-color: #ffffff;
+}
+.header-menu {
+  text-align: right;
+}
+.header-menu li {
+  display: inline-block;
+}
+.header-menu li a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #0071c5;
+  font-size: 18px;
+}
+.menu-aktif a {
+  color: #00aeef !important;
+  border-bottom: 1px solid #00aeef;
+  padding-bottom: 10px;
+}
+
+/*Ana Sayfa Slider*/
+.slider-baslik-1,
+.slider-baslik-2 {
+  color: #ffffff;
+}
+.slider-baslik-1 {
+  font-size: 50px;
+  font-weight: 100;
+  padding-top: 80px;
+  display: block;
+}
+.slider-baslik-2 {
+  font-size: 48px;
+  font-weight: 400;
+  padding-bottom: 40px;
+  display: block;
+}
+.slider-buton {
+  padding-bottom: 40px;
+}
+
+/*Ana Sayfa Hizmetler*/
+
+.hizmet-oge .buton {
+  float: right;
+  font-weight: 500;
+}
+.hizmet-oge-aciklama {
+  background-color: #f7f4f4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*Ana Sayfa Hakkımızda*/
+
+.anasayfa-hakkimizda {
+  background-color: #f7f4f4;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.anasayfa-hakkimizda .buton {
+  float: left;
+}
+
+/*Ana Sayfa Referanlsarımız*/
+
+.referans-oge {
+  margin-bottom: 30px;
+}
+
+/*Ana Sayfa Ne Dediler ? */
+
+.anasayfa-nedediler {
+  background-color: #f7f4f4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.anasayfa-nedediler h2 {
+  margin-bottom: 30px;
+}
+.nedediler {
+  background-color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nedediler-unvan {
+  float: right;
+  font-weight: bold;
+}
+.firma-oge {
+  background-color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+}
+
+/*Ana Sayfa Haberler*/
+.anasayfa-haberler {
+  padding-bottom: 50px;
+}
+.haber-oge {
+  text-align: center;
+}
+
+/*Footer Alanı*/
+
+.footer-alani {
+  background-color: #111111;
+  color: #cccccc;
+  padding-top: 50px;
+}
+.footer-alani a {
+  color: #cccccc;
+}
+.footer-alani h4 {
+  font-size: 24px;
+  font-weight: 100;
+  border-bottom: 1px solid #00aeef;
+  line-height: 24px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.footer-alani-logo {
+  margin-bottom: 20px;
+}
+.footer-sosyal-menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer-sosyal-menu li {
+  display: inline-block;
+}
+.footer-sosyal-menu li a {
+  background-color: #333333;
+  border-radius: 50%;
+  display: block;
+  width: 35px;
+  line-height: 35px;
+  height: 35px;
+  text-align: center;
+  color: #cccccc;
+}
+.footer-haber-oge {
+  margin-bottom: 20px;
+}
+.footer-haber-oge span {
+  font-size: 12px;
+}
+.etiket {
+  background-color: #333333;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.footer-copy {
+  line-height: 40px;
+  height: 40px;
+  border-top: 1px solid #cccccc;
+}
+
+.sayfa-kutusu {
+  padding-bottom: 20px;
+}
