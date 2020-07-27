@@ -18,10 +18,10 @@
                 <div class="col-md-3 col-sm-2 col-6 header-telefon"><i class="fas fa-phone-volume"></i>
                     <?php the_field('header_telefon', 'option') ?>
                 </div>
-                <div class="col-md-3 col-sm-2 col-6 header-mail"><i class="fas fa-envelope"></i> <a
+                <div class="col-md-3 col-sm-2 col-8 header-mail"><i class="fas fa-envelope"></i> <a
                         href="mailto:<?php the_field('header_mail_adresi', 'option') ?>"><?php the_field('header_mail_adresi', 'option') ?></a>
                 </div>
-                <div class="col-md-3 col-sm-5 col-6 header-sosyal">
+                <div class="col-md-3 col-sm-5 col-4 header-sosyal">
                     <ul class="list-unstyled">
                         <?php
                         $facebook = get_field('header_facebook_adresi', 'option');
@@ -88,7 +88,7 @@
 
 
                 <div class="mobile-menu">
-                    <?php wp_nav_menu(array('theme_location' => 'mobile', 'menu_class' => 'mobil_menusu')); ?>
+                    <?php wp_nav_menu(array('theme_location' => 'mobilmenu', 'menu_class' => 'mobil_menusu')); ?>
 
                 </div>
                 <a href="#" class="mobile-menu-ackapa"><i class="fa fa-bars"></i></a>

@@ -5,10 +5,13 @@ function stuka_setup()
 
     register_nav_menu('anamenu', __('Ana Menu', 'stuka'));
     register_nav_menu('footer', __('Footer Menu', 'stuka'));
-    register_nav_menu('mobile', __('Mobile Menu', 'stuka'));
+    register_nav_menu('mobilmenu', __('Mobile Menu', 'stuka'));
 
     add_theme_support('title-tag');
-    add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
+    add_theme_support('html5', array(
+        'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'script',
+        'style'
+    ));
 
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(600, 250, true);

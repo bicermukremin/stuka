@@ -296,8 +296,6 @@ if ($nedediler) :
 <div class="clearfix"></div>
 
 
-</body>
 
-</html>
 
 <?php get_footer(); ?>
