@@ -79,8 +79,8 @@
     <div class="container header-alani">
         <div class="row">
             <?php $logo = get_field('site_logosu', 'option'); ?>
-            <div class="col-md-2 col-sm-3 col-6 header-logo"><a href="index.html"><img src="<?php echo $logo['url']; ?>"
-                        class="img-fluid" alt="" /></a></div>
+            <div class="col-md-2 col-sm-3 col-6 header-logo"><a href="<?php the_field('logo_link', 'option') ?>"><img
+                        src="<?php echo $logo['url']; ?>" class="img-fluid" alt="" /></a></div>
             <div class="col-md-10 col-sm-9 col-6 header-menu">
 
                 <?php wp_nav_menu(array('theme_location' => 'anamenu', 'menu_class' => 'ana_menusu')); ?>

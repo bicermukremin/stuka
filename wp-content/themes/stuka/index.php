@@ -92,6 +92,102 @@
 
 <div class="clearfix"></div>
 
+<div class="container-fluid anasayfa-hakkimizda">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2><?php the_field('baslik', 'option') ?></h2>
+
+                    <p><?php the_field('hakkimizda_yazisi', 'option') ?></p>
+
+
+                    <a href="<?php the_field('hakkimizda_buton_link', 'option') ?>"
+                        class="buton acik-mavi-buton"><?php the_field('hakkimizda_buton_yazi', 'option') ?></a>
+
+
+                </div>
+
+                <div class="col-md-6">
+                    <?php $hakkimizda = get_field('hakkimizda_gorsel', 'option'); ?>
+                    <img src="<?php echo $hakkimizda['url'] ?>" class="img-fluid anasayfa-hakkimizda-foto" alt="" />
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="container anasayfa-referanslarimiz">
+
+    <div class="row">
+
+        <div class="col-md-9 margin-top-30 margin-bottom-30">
+            <h2><?php the_field('referans_baslik', 'option') ?></h2>
+            <p><?php the_field('referans_yazi', 'option') ?></p>
+        </div>
+
+        <div class="col-md-3 margin-top-30 margin-bottom-30 text-right">
+
+            <a href="<?php the_field('referans_buton_link', 'option') ?>"
+                class="buton mavi-buton"><?php the_field('referans_buton_yazi', 'option') ?></a>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <?php
+        $sayireferans = get_field('kac_adet_gosterilsin', 'option');
+        $arg = array(
+            'post_type' => 'referans',
+            'order_by' => 'date',
+            'posts_per_page' => $sayireferans
+        );
+
+        $wp_query = new WP_Query($arg);
+
+        while ($wp_query->have_posts()) : $wp_query->the_post();
+        ?>
+        <div class="col-md-3 referans-oge">
+            <a href="#" data-toggle="modal"
+                data-target="#referans<?php the_ID() ?>"><?php the_post_thumbnail('thumbnail-large', array('class' => 'img-fluid')); ?></a>
+            <div class="modal fade" id="referans<?php the_ID() ?>" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"><?php the_title() ?></h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <?php the_post_thumbnail('thumbnail-large', array('class' => 'img-fluid')); ?>
+                            <p><?php the_excerpt() ?></p>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php endwhile ?>
+
+
+
+    </div>
+
+</div>
+
 
 </body>
 
