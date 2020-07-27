@@ -187,6 +187,62 @@
     </div>
 
 </div>
+<?php $nedediler = get_field('ne_dediler_icerik', 'option');
+if ($nedediler) :
+    $nedediler_tek = $nedediler[array_rand($nedediler)];
+?>
+
+<div class="container-fluid anasayfa-nedediler">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2><?php the_field('ne_dediler_baslik', 'option') ?></h2>
+
+
+                <div class="col-md-12 nedediler">
+
+                    <p><?php echo $nedediler_tek['yazi'] ?></p>
+
+                    <div class="nedediler-unvan">
+                        <?php echo $nedediler_tek['isim'] ?><br><?php echo $nedediler_tek['sirket'] ?></div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+            <div class="col-md-6 anasayfa-firmalar">
+
+                <h2><?php the_field('bolum_baslik', 'option') ?></h2>
+
+                <div class="row">
+                    <?php
+
+
+                        while (have_rows('bolum_icerik', 'option')) : the_row();
+
+                            $firma_gorsel = get_sub_field('resim', 'option');
+                        ?>
+                    <div class="col-md-6"><a href="#" class="firma-oge"><img src="<?php echo $firma_gorsel['url'] ?>"
+                                alt="" /></a>
+                    </div>
+
+                    <?php endwhile ?>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+<?php endif ?>
+<div class="clearfix"></div>
 
 
 </body>
