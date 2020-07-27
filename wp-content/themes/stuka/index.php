@@ -244,6 +244,57 @@ if ($nedediler) :
 <?php endif ?>
 <div class="clearfix"></div>
 
+<div class="container anasayfa-haberler">
+
+    <div class="row">
+
+        <div class="col-md-9 margin-top-30 margin-bottom-30">
+            <h2><?php the_field('haber', 'option') ?></h2>
+            <p><?php the_field('haber_yazi', 'option') ?></p>
+        </div>
+
+        <div class="col-md-3 margin-top-30 margin-bottom-30 text-right">
+
+            <a href="<?php the_field('haber_buton_link', 'option') ?>"
+                class="buton mavi-buton"><?php the_field('haber_buton_yazi', 'option') ?></a>
+
+        </div>
+
+        <div class="clearfix"></div>
+        <?php
+        $sayihaber = get_field('kac_adet_gosterilsin', 'option');
+        $arg = array(
+            'post_type' => 'post',
+            'order_by' => 'date',
+            'posts_per_page' => $sayihaber
+        );
+
+        $wp_query = new WP_Query($arg);
+
+        while ($wp_query->have_posts()) : $wp_query->the_post();
+        ?>
+        <div class="col-md-4 haber-oge">
+            <a
+                href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail-large', array('class' => 'img-fluid')); ?></a>
+
+            <div class="col-md-12 hizmet-oge-aciklama">
+                <h3><?php the_title() ?></h3>
+                <p><?php the_excerpt() ?></p>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+        <?php endwhile ?>
+
+    </div>
+
+</div>
+
+
+<div class="clearfix"></div>
+
 
 </body>
 
